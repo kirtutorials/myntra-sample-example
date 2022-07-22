@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" th:href="@{/css/myntra-products.css}">
+</head>
+<body>
+<div class="container">
+  <div class="card"  th:each="product : ${products}">
+<!--      <span th:text="${product.size}"></span>-->
+
+      <div class="card__header">
+      <img src="https://source.unsplash.com/600x400/?car,automobile" alt="card__image" class="card__image" width="600">
+    </div>
+    <div class="card__body">
+      <span th:text="'Size: ' + ${product.size}"></span>
+      <span th:text="'Price: ' + ${product.price}"></span>
+      <span th:text="'Qty: ' + ${product    .quantity}"></span>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+    </div>
+<!--    <div class="card__footer">-->
+<!--      <div class="user">-->
+<!--        <img src="https://i.pravatar.cc/40?img=1" alt="user__image" class="user__image">-->
+<!--        <div class="user__info">-->
+<!--          <h5>Jane Doe</h5>-->
+<!--          <small>2h ago</small>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+  </div>
+</div>
+
+</body>
+</html>
