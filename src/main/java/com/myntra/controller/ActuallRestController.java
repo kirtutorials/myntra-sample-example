@@ -18,6 +18,8 @@ public class ActuallRestController {
 
     @PostMapping(path="/api/v1/cloths/add")
     public String addClothingItem(@RequestBody ClothingItem item) {
+        // check thetoken
+        var token = headers.getHeader("Cotent-Type");
         System.out.println("got the request inside addClothing");
 
         service.addItem(item);
